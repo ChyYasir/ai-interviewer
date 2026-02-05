@@ -212,7 +212,7 @@ export const SignUpView = () => {
 
               <Button
                 type="submit"
-                className="w-full"
+                className="w-full cursor-pointer"
                 disabled={isLoading || socialLoading !== null}
               >
                 {isLoading ? (
@@ -241,7 +241,7 @@ export const SignUpView = () => {
           <div className="flex gap-2">
             <Button
               variant="outline"
-              className="flex-1"
+              className="flex-1 cursor-pointer"
               onClick={() => handleSocialSignIn("google")}
               disabled={isLoading || socialLoading !== null}
               title="Sign up with Google"
@@ -272,7 +272,7 @@ export const SignUpView = () => {
 
             <Button
               variant="outline"
-              className="flex-1"
+              className="flex-1 cursor-pointer"
               onClick={() => handleSocialSignIn("github")}
               disabled={isLoading || socialLoading !== null}
               title="Sign up with GitHub"
@@ -292,7 +292,7 @@ export const SignUpView = () => {
 
             <Button
               variant="outline"
-              className="flex-1"
+              className="flex-1 cursor-pointer"
               onClick={() => handleSocialSignIn("facebook")}
               disabled={isLoading || socialLoading !== null}
               title="Sign up with Facebook"

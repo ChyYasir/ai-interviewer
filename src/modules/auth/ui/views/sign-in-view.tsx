@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, z } from "zod";
+import { z } from "zod";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -27,7 +27,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { AlertCircle, Loader2 } from "lucide-react";
-import { se } from "date-fns/locale";
 
 const signInSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -166,7 +165,7 @@ export const SignInView = () => {
 
               <Button
                 type="submit"
-                className="w-full"
+                className="w-full cursor-pointer"
                 disabled={isLoading || socialLoading !== null}
               >
                 {isLoading ? (
@@ -195,7 +194,7 @@ export const SignInView = () => {
           <div className="flex gap-2">
             <Button
               variant="outline"
-              className="flex-1"
+              className="flex-1 cursor-pointer"
               onClick={() => handleSocialSignIn("google")}
               disabled={isLoading || socialLoading !== null}
               title="Sign in with Google"
@@ -226,7 +225,7 @@ export const SignInView = () => {
 
             <Button
               variant="outline"
-              className="flex-1"
+              className="flex-1 cursor-pointer"
               onClick={() => handleSocialSignIn("github")}
               disabled={isLoading || socialLoading !== null}
               title="Sign in with GitHub"
@@ -246,7 +245,7 @@ export const SignInView = () => {
 
             <Button
               variant="outline"
-              className="flex-1"
+              className="flex-1 cursor-pointer"
               onClick={() => handleSocialSignIn("facebook")}
               disabled={isLoading || socialLoading !== null}
               title="Sign in with Facebook"
