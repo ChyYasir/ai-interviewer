@@ -1,3 +1,7 @@
 import { drizzle } from "drizzle-orm/neon-http";
+import { validateEnv, getEnv } from "@/lib/env";
 
-export const db = drizzle(process.env.DATABASE_URL!);
+// Validate required environment variables
+validateEnv();
+
+export const db = drizzle(getEnv("DATABASE_URL"));
